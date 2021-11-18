@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "33291293614",
+    "project_id": "zawraaapp",
+    "storage_bucket": "zawraaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33291293614:android:5f36da6bee34861bc82e3f",
+        "android_client_info": {
+          "package_name": "com.zawraapharma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33291293614-ts8piel39ssc7h5r7dqhqnphk44am7eb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO6s1Bqn_XeyTaGK-j1OVvn2lBPi3XvXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33291293614-ts8piel39ssc7h5r7dqhqnphk44am7eb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

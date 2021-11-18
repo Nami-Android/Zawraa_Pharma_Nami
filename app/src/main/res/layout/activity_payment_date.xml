@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="lang"
+            type="String" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/circle_primary"
+                android:src="@drawable/ic_left_arrow"
+                android:padding="8dp"
+                app:tint="@color/white"
+                android:rotation='@{lang.equals("ar")?180:0}'
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@{title}"
+                />
+        </androidx.appcompat.widget.Toolbar>
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+          <ScrollView
+              android:id="@+id/scrollView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fillViewport="true"
+              android:fitsSystemWindows="true"
+              android:visibility="gone"
+              >
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="8dp"
+                  >
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:textSize="18sp"
+                      android:singleLine="true"
+                      android:layout_marginStart="10dp"
+                      android:layout_marginEnd="10dp"
+                      android:text="@string/select_date"
+
+                      />
+
+                  <androidx.cardview.widget.CardView
+                      android:id="@+id/cardViewDate"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      app:cardBackgroundColor="@color/white"
+                      app:cardCornerRadius="25dp"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginEnd="20dp"
+                      app:cardElevation="2dp"
+
+                      >
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="45dp"
+
+                          android:gravity="center_vertical"
+                          android:orientation="horizontal"
+                          android:clickable="false"
+                          android:longClickable="false"
+
+                          >
+
+                          <Space
+                              android:layout_width="20dp"
+                              android:layout_height="0dp"/>
+                          <FrameLayout
+                              android:layout_width="24dp"
+                              android:layout_height="24dp"
+                              android:clickable="false"
+                              android:longClickable="false"
+
+                              >
+
+                              <ImageView
+                                  android:id="@+id/imgSearch"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_gravity="center"
+                                  android:clickable="false"
+                                  android:longClickable="false"
+                                  android:padding="2dp"
+                                  android:src="@drawable/ic_calendar"
+                                  app:tint="@color/colorPrimary"
+
+
+                                  />
+                          </FrameLayout>
+
+
+                          <TextView
+                              android:id="@+id/tvDate"
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="35dp"
+                              android:layout_marginStart="8dp"
+                              android:layout_marginEnd="8dp"
+                              android:background="@color/white"
+                              android:hint="@string/select_date"
+                              android:paddingLeft="5dp"
+                              android:paddingRight="5dp"
+                              android:scrollHorizontally="true"
+                              android:singleLine="true"
+                              android:textColor="@color/black"
+                              android:textSize="15sp"
+                              tools:ignore="RtlCompat"
+                              android:gravity="center_vertical"
+                              android:clickable="false"
+                              android:longClickable="false"
+                              />
+
+                          <Space
+                              android:layout_width="10dp"
+                              android:layout_height="0dp"/>
+
+
+                      </LinearLayout>
+
+                  </androidx.cardview.widget.CardView>
+                  <Space
+                      android:layout_width="0dp"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"/>
+                  <LinearLayout
+                      android:id="@+id/llActions"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_gravity="center_vertical"
+                      android:layout_marginTop="10dp"
+                      android:visibility="gone"
+                      >
+                      <Button
+                          android:id="@+id/btnSave"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:background="@drawable/rounded_green"
+                          android:textColor="@color/white"
+                          android:textSize="15sp"
+                          android:text="@string/save"
+
+                          />
+                      <Space
+                          android:layout_width="10dp"
+                          android:layout_height="0dp"/>
+                      <Button
+                          android:id="@+id/btnBack"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:background="@drawable/rounded_red"
+                          android:textColor="@color/white"
+                          android:textSize="15sp"
+                          android:text="@string/back"
+
+                          />
+                  </LinearLayout>
+              </LinearLayout>
+          </ScrollView>
+
+          <ProgressBar
+              android:id="@+id/progBar2"
+              android:layout_gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              />
+      </FrameLayout>
+    </LinearLayout>
+</layout>

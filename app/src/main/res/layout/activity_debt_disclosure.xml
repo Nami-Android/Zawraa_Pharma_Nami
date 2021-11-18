@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="lang"
+            type="String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bill_back"
+            android:orientation="vertical"
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/llBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/circle_primary"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    android:padding="8dp"
+                    android:rotation='@{lang.equals("ar")?180:0}'
+                    android:src="@drawable/ic_left_arrow"
+                    app:tint="@color/white" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:longClickable="false"
+                    android:text="@string/Debt_disclosure"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="35dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:longClickable="false"
+                android:text="@string/search_bill"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_stroke_primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3"
+
+                >
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <FrameLayout
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_search2"
+                        app:tint="@color/colorPrimary"
+
+                        />
+                </FrameLayout>
+
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="@string/invoice_number"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    tools:ignore="RtlCompat"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_stroke_primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:visibility="gone"
+
+                >
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <FrameLayout
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+
+
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_filter"
+                        app:tint="@color/colorPrimary"
+
+                        />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tvFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:hint="@string/filter"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    tools:ignore="RtlCompat" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:longClickable="false"
+                android:text="@string/Debt_disclosure"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/rounded_top"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".3"
+                            android:gravity="center_vertical"
+                            android:lines="2"
+                            android:text="@string/pharmacy_name"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".23"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:text="@string/debt"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".23"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:text="@string/date"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".24"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:text="@string/code"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+
+                            />
+                    </LinearLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="180dp"
+                        >
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tvNoData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:text="@string/no_data_to_show"
+                            android:visibility="gone"
+                            />
+                        <ProgressBar
+                            android:id="@+id/progBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/drawable/ic_plus2.xml" value="0.2203125" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_bill_details.xml" value="0.19722222222222222" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_find_pharmacy.xml" value="0.1935185185185185" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_login.xml" value="0.19722222222222222" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_new_client.xml" value="0.19722222222222222" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_pay_bill.xml" value="0.1935185185185185" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_pay_pill.xml" value="0.20102564102564102" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_pharmacy_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/android/Projects/ZawraaPharma/app/src/main/res/layout/activity_sales.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

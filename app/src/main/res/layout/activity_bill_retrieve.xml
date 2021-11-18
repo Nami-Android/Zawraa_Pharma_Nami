@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="lang"
+            type="String" />
+
+        <variable
+            name="userModel"
+            type="com.zawraapharma.models.UserModel" />
+        <variable
+            name="model"
+            type="com.zawraapharma.models.RetrieveResponseModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".ui.activity_bill_details.BillDetailsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:id="@+id/llBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_left_arrow"
+                    app:tint="@color/white"
+                    android:rotation='@{lang.equals("ar")?180:0}'
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="@string/retrieve_receipt"
+                    />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/llBill"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    >
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="مكتب الزوراء العلمي"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/retrieve_receipt"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/small_rounded_gray"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".4"
+                                    android:text="@string/date"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".6"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:text="@{model.date}"
+                                    android:gravity="start"
+                                    android:textAlignment="viewStart"
+                                    android:textStyle="bold"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".4"
+                                    android:text="@string/delegate_name"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".6"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:text="@{userModel.data.name}"
+                                    android:gravity="start"
+                                    android:textAlignment="viewStart"
+                                    android:textStyle="bold"
+
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".4"
+                                    android:text="@string/receipt_num"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".6"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:text="@{String.valueOf(model.bill_code)}"
+                                    android:gravity="start"
+                                    android:textAlignment="viewStart"
+                                    android:textStyle="bold"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".4"
+                                    android:text="@string/pharmacy_name"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".6"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:text="@{model.client.title}"
+                                    android:gravity="start"
+                                    android:textAlignment="viewStart"
+                                    android:textStyle="bold"
+
+                                    />
+                            </LinearLayout>
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/rounded_top2"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:text="@string/product"
+                                android:textStyle="bold"
+
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:text="@string/inv"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:text="@string/amount3"
+                                android:textStyle="bold"
+
+                                />
+
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:text="مكتب الزوراء العلمي- بغداد-المنصور-\n 009647830303636-009647830303131"
+                    android:background="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            >
+            <Button
+                android:id="@+id/btnShow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_green"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="@string/print"
+                android:visibility="visible"
+
+                />
+            <Space
+                android:id="@+id/space"
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                />
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_red"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="@string/delete"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

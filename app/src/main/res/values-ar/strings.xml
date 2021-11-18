@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">زوراء</string>
+    <string name="map_api_key">AIzaSyDgWrkvQ8qLT_eu8e0CFzqmzeRvr96EmKU</string>
+    <string name="field_req">الحقل مطلوب</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="wait">إنتظر قليلا...</string>
+    <string name="secrt_code">الرمز السري</string>
+    <string name="login">دخول</string>
+    <string name="next">التالي</string>
+    <string name="ok">حسنا!</string>
+    <string name="choose_language"><![CDATA[إختر <font color="#F61C00">اللغة</font>]]></string>
+    <string name="Pay_the_bill">تسديد فاتورة</string>
+    <string name="Find_pharmacy_location">البحث عن مكان صيدلية</string>
+    <string name="Debt_disclosure">كشف ديون</string>
+    <string name="Appointments">مواعيد</string>
+    <string name="search">بحث</string>
+    <string name="no_search_results">لا توجد نتائج بحث</string>
+    <string name="search_bill">البحث عن اسم الصيدلية- المذخر او من خلال رقم الفاتورة</string>
+    <string name="retrieve_an_invoice">إسترجاع فاتورة</string>
+    <string name="payment_date">موعد التسديد</string>
+    <string name="dept">القسم</string>
+    <string name="inv">رقم الفاتورة</string>
+    <string name="date">التاريخ</string>
+    <string name="remain">المتبقي</string>
+    <string name="amount">المبلغ الصافى</string>
+    <string name="total_amount">إجمالي المبلغ:</string>
+    <string name="discount">الخصم:</string>
+    <string name="amount2">المبلغ الصافى:</string>
+    <string name="notes">ملاحظات:</string>
+    <string name="back">خروج</string>
+    <string name="show">إظهار الفاتورة</string>
+    <string name="search_by_invoice_number">البحث برقم الفاتورة...</string>
+    <string name="choose_company">إختيار الشركة</string>
+    <string name="search_result">نتيجة البحث</string>
+    <string name="product">المنتج</string>
+    <string name="retrieve_amount">الكمية المسترجعة</string>
+    <string name="select_date">حدد التاريخ</string>
+    <string name="save">حفظ</string>
+    <string name="select">إختر</string>
+    <string name="cancel">إلغاء</string>
+    <string name="filter">تصفية</string>
+    <string name="pharmacy_name">إسم الصيدلية</string>
+    <string name="debt">الدين</string>
+    <string name="user_not_found">User Not Found</string>
+    <string name="failed">يوجد مشكله وجارى العمل عليها </string>
+    <string name="something">تحقق من الاتصال بالانترنت</string>
+    <string name="logout">خروج</string>
+    <string name="pharmacies">الصيدليات:</string>
+    <string name="no_data_to_show">لا توجد صيدليات لعرضها</string>
+    <string name="suc">تم بنجاح!</string>
+    <string name="paid_amount_grater">عفوا, المبلغ المسدد اكبر من المبلغ المتبقي!!</string>
+    <string name="payment_receipt">إيصال التسديد</string>
+    <string name="time">الوقت</string>
+    <string name="receipt_num">رقم الوصل #</string>
+    <string name="print">تاكيد الطباعة</string>
+    <string name="delete">حذف مع الخروج</string>
+    <string name="invoice_number">أدخل رقم الفاتورة</string>
+    <string name="bill_num_inc">رقم الفاتورة غير صحيح</string>
+    <string name="connect">إتصال</string>
+    <string name="scan">بحث</string>
+    <string name="printers">الطابعة</string>
+    <string name="open_bluetooth">من فضلك قم بفتح البلوتوث</string>
+    <string name="code">#الكود</string>
+    <string name="refresh">تحديث قاعدة البيانات</string>
+
+
+
+    <string name="toast_1">Transaction print,use the AIDL mode!</string>
+    <string name="toast_2">The service has been disconnected!</string>
+    <string name="toast_3">جهاز البلوتوث غير متوفر</string>
+    <string name="toast_4">لم يتم اكتشاف جهاز بلوتوث. الرجاء فتح البلوتوث!</string>
+    <string name="toast_5">لم يتم العثور على طابعة انتر!</string>
+    <string name="toast_6">فشل اتصال بلوتوث!</string>
+    <string name="toast_7">Only a single Qr code is printed for the AIDL mode</string>
+    <string name="toast_8">Now QrCode size must be less than 7!</string>
+    <string name="toast_9">BarCode type or conent error!</string>
+    <string name="toast_10">Please set the printer as black label mode!</string>
+    <string name="toast_11">Settings->System->Advanced->InnerPrinter-> set black mark function</string>
+    <string name="toast_12">Please set the printer to label mode!</string>
+
+    <string name="pic_mode">picture printing method</string>
+    <string name="pic_mode1">raster bitmap</string>
+    <string name="pic_mode2">8 point single density</string>
+    <string name="pic_mode3">8 point double density</string>
+    <string name="pic_mode4">24 point single density</string>
+    <string name="pic_mode5">24 point double density</string>
+    <string name="style_width">times width</string>
+    <string name="style_height">times height</string>
+
+    <string name="align_form">المحاذاة</string>
+    <string name="align_left">لليسار</string>
+    <string name="align_mid">وسط</string>
+    <string name="align_right">يمين</string>
+    <string name="pic_pos">موقع الصورة</string>
+    <string name="pic_hor">افقي</string>
+    <string name="pic_ver">رأسي</string>
+    <string name="retrieve_receipt">ايصال الاسترجاع</string>
+    <string name="delegate_name">إسم المندوب</string>
+    <string name="amount3">الكمية المسترجعة</string>
+    <string name="up_data">قم بتحديث البيانات اولا</string>
+    <string name="sales">مبيعات</string>
+    <string name="price">السعر</string>
+    <string name="bonus">بونص</string>
+    <string name="amount4">الكمية</string>
+    <string name="choose_client">اختيار زبون</string>
+    <string name="user_blocked">لقد تم حظرك</string>
+    <string name="newClient">زبون جديد</string>
+    <string name="title">اسم الزبون</string>
+    <string name="location">الموقع</string>
+    <string name="send">ارسال</string>
+    <string name="category">القسم</string>
+    <string name="field_required">الحقل مطلوب</string>
+
+
+</resources>
